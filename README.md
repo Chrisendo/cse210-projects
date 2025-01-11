@@ -12,8 +12,8 @@ This repository contains the starter code for many different projects. They are 
 * `final` - Starter projects for final project.
 
 
-git commit -m "Added name to line 4."
+# git commit -m "Added name to line 4."
 
-git push origin main
+# git push origin main
 
-git push
+# git push
