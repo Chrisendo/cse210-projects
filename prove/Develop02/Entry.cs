@@ -1,0 +1,14 @@
+public class Entry
+{
+    public string _author;
+    public string _date;
+    public string _promptQuestion;
+    public string _response;
+
+
+    public void Display()
+    {
+        Console.WriteLine($"");
+    }
+
+}
