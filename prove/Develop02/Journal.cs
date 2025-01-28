@@ -6,5 +6,11 @@ public class Journal
     public void Display()
     {
         Console.WriteLine($"");
+
+
+        foreach(Entry entryStuff in _entries)
+        {
+            entryStuff.Display();
+        }
     }
 }
