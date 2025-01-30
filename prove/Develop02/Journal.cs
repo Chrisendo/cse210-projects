@@ -16,4 +16,4 @@ public class Journal
 }
 
 
-// save to file goes in this file. Goes through each entry in the list.
+// save to file goes in this file. Goes through each entry in the list.Resume == Journal?
