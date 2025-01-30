@@ -14,3 +14,6 @@ public class Journal
         }
     }
 }
+
+
+// save to file goes in this file. Goes through each entry in the list.
