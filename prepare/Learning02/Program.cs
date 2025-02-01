@@ -5,7 +5,9 @@ class Program
 {
     static void DisplayMenu()
     {
-        Console.WriteLine();
+        Console.WriteLine("1. Add job. ");
+        Console.WriteLine("2. Display resume. ");
+        Console.WriteLine("3. Quit. ");
     }
 
     static void Main(string[] args)
