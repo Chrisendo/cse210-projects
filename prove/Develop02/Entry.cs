@@ -8,7 +8,17 @@ public class Entry
 
     public void Display()
     {
-        Console.WriteLine($"");
+        Console.WriteLine($"{_author}");
+
+        Console.WriteLine($"{_date}");
+
+        Console.WriteLine($"{_promptQuestion}");
+
+        // Console.WriteLine(ReadFromFile());
+
+        Console.WriteLine($"{_response}");
+
+        Console.WriteLine();
     }
 
 }
