@@ -20,19 +20,24 @@ public class Journal
         }
     }
     
-    // public static void SaveToFile(List<Entry> en)
-    // {
-    //     string filename = "PromptList.txt";
-    //     string[] lines = System.IO.File.ReadAllLines(filename);
+    public static void LoadFile()
+    {
+        string filename = "PromptList.txt";
+        string[] lines = System.IO.File.ReadAllLines(filename);
 
-    //     foreach (string line in lines)
-    //     {
-    //         string[] parts = line.Split(",");
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split(",");
 
-    //         string firstName = parts[0];
-    //         string lastName = parts[1];
-    //     }
-    // }
+            string firstName = parts[0];
+            string lastName = parts[1];
+        }
+    }
+    // THIS IS HOW TO CALL THE LOAD FUNCTION!!!!!
+    // theJournal.LoadFile(filename);
+
+
+
 
 
     // public static void SaveToFile(List<Entry> en)
@@ -86,6 +91,11 @@ public class Journal
 
     //     return journalStuff;
     // }
+                // THIS IS HOW TO CALL THE LOAD FUNCTION!!!!!
+                // theJournal.LoadFile(filename);
+
+
+
 
         // public static List<Entry> ReadFromFile()
         // {
