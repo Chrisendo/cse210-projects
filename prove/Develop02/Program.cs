@@ -66,6 +66,9 @@ class Program
             }
             else if (choice == "3")
             {
+
+                theJournal.SaveToFile();
+
                 // Save the journal to a file
 
                 //theJournal.SaveToFile()

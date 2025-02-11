@@ -20,19 +20,19 @@ public class Journal
         }
     }
     
-    public static void LoadFile()
-    {
-        string filename = "PromptList.txt";
-        string[] lines = System.IO.File.ReadAllLines(filename);
+    // public static void LoadFile()
+    // {
+    //     string filename = "PromptList.txt";
+    //     string[] lines = System.IO.File.ReadAllLines(filename);
 
-        foreach (string line in lines)
-        {
-            string[] parts = line.Split(",");
+    //     foreach (string line in lines)
+    //     {
+    //         string[] parts = line.Split("~|~");
 
-            string firstName = parts[0];
-            string lastName = parts[1];
-        }
-    }
+    //         string firstName = parts[0];
+    //         string lastName = parts[1];
+    //     }
+    // }
     // THIS IS HOW TO CALL THE LOAD FUNCTION!!!!!
     // theJournal.LoadFile(filename);
 
@@ -71,26 +71,26 @@ public class Journal
 
 
 
-    // public void LoadFromFile(file, string)
-    // {
-    //     List<Entry> journalStuff = new List<Entry>();
-    //     string filename = "PromptList.txt";
-    //     string[] lines = System.IO.File.ReadAllLines(filename);
+    public void LoadFromFile()
+    {
+        // List<Entry> journalStuff = new List<Entry>();
+        string filename = "PromptList.txt";
+        string[] lines = System.IO.File.ReadAllLines(filename);
 
-    //     foreach (string line in lines)
-    //     {
-    //     string[] parts = line.Split("-|-");
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split("-|-");
 
-    //     Entry entryStuff = new Entry();
+            Entry entryStuff = new Entry();
 
-    //     entryStuff._author = parts[0];
-    //     entryStuff._date = parts[1];
-    //     entryStuff._promptQuestion = parts[2];
-    //     entryStuff._response = parts[3];
-    //     }
+            entryStuff._author = parts[0];
+            entryStuff._date = parts[1];
+            entryStuff._promptQuestion = parts[2];
+            entryStuff._response = parts[3];
+        }
 
     //     return journalStuff;
-    // }
+    }
                 // THIS IS HOW TO CALL THE LOAD FUNCTION!!!!!
                 // theJournal.LoadFile(filename);
 
