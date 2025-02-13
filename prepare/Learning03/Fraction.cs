@@ -27,25 +27,25 @@ public class Fraction
 
 
     // Do I even need these???
-    public int GetTopNumber()
-    {
-        return _top;
-    }
+    // public int GetTopNumber()
+    // {
+    //     return _top;
+    // }
 
-    public void SetTopNumber(int top)
-    {
-        _top = top;
-    }
+    // public void SetTopNumber(int top)
+    // {
+    //     _top = top;
+    // }
 
-    public int GetBottomNumber()
-    {
-        return _bottom;
-    }
+    // public int GetBottomNumber()
+    // {
+    //     return _bottom;
+    // }
 
-    public void SetBottomNumber(int bottom)
-    {
-        _bottom = bottom;
-    }
+    // public void SetBottomNumber(int bottom)
+    // {
+    //     _bottom = bottom;
+    // }
 
 
 
