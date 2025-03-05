@@ -1,14 +1,31 @@
 public class Activity
 {
-    private string _startingMessage;
-    private string _name;
-    private int _time;
+    protected string _startingMessage; // discription
+    protected string _name; // name of activity
+    protected int _time; // duration
+    protected int _timesRun = 0;
 
 
-    public Activity(string startMessage, string name, int time)
+    // public Activity()
+    // {
+        
+    // }
+
+    
+
+
+    protected void DisplayStartingMessage()
     {
-        _startingMessage = startMessage;
-        _name = name;
-        _time = time;
+        Console.WriteLine($"Hello! Welcome to the {_name} activity");
+        Console.WriteLine($"{_startingMessage}");
+
+        Console.WriteLine("How long would you like to go for?");
+
+        _time = int.Parse(Console.ReadLine());
+    }
+
+    public void DisplayEndingMessage()
+    {
+        Console.WriteLine($"Well done! You have completed another {_time} seconds of the {_name}");
     }
 }

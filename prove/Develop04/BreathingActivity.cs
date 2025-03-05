@@ -1,13 +1,20 @@
 public class BreathingActivity : Activity
 {
-    public BreathingActivity(string startMessage, string name, int time) : base(startMessage, name, time)
+    public BreathingActivity()
     {
-        // Nothing I can think of goes here.
+        _name = "Breathing Activity";
+        _startingMessage = "This should be a discription of the breathing activity";
     }
+
+
+
 
 
     public void Run()
     {
+        DisplayStartingMessage();
 
+        // breathing in / brethe out
+        // DisplayEndingMessage();
     }
 }
