@@ -1,4 +1,5 @@
 using System.IO.Enumeration;
+using System.IO;
 
 public class Journal
 {
@@ -9,16 +10,6 @@ public class Journal
         
     // }
 
-    public void DisplayAll()
-    {
-        Console.WriteLine($"");
-
-
-        foreach(Entry entryStuff in _entries)
-        {
-            entryStuff.Display();
-        }
-    }
     
     // public static void LoadFile()
     // {
@@ -62,8 +53,12 @@ public class Journal
 
         using (StreamWriter outputFile = new StreamWriter(fileName))
         {
+            foreach (Entry e in _entries)
+            {
             // You can add text to the file with the WriteLine method
-            outputFile.WriteLine("This will be the first line in the file.");
+                outputFile.WriteLine($"{e._author}-|-{e._date}-|-{e._promptQuestion}-|-{e._response}");
+            }
+                
         }
 
 
@@ -74,7 +69,7 @@ public class Journal
     public void LoadFromFile()
     {
         // List<Entry> journalStuff = new List<Entry>();
-        string filename = "PromptList.txt";
+        string filename = "SavedStuff.txt";
         string[] lines = System.IO.File.ReadAllLines(filename);
 
         foreach (string line in lines)
@@ -88,8 +83,33 @@ public class Journal
             entryStuff._promptQuestion = parts[2];
             entryStuff._response = parts[3];
         }
+    }
 
-    //     return journalStuff;
+
+    public void DisplayAll()
+    {
+        Console.WriteLine($"");
+
+        foreach(Entry entryStuff in _entries)
+        {
+            entryStuff.Display();
+        }
+    }
+
+
+    public void DisplaySavedFile()
+    {
+        foreach (Entry entry in _entries)
+        {
+            Console.WriteLine();
+
+            Console.WriteLine($"Author: {entry._author}");
+            Console.WriteLine($"Date: {entry._date}");
+            Console.WriteLine($"Prompt: {entry._promptQuestion}");
+            Console.WriteLine($"Response: {entry._response}");
+
+            Console.WriteLine();
+        }
     }
                 // THIS IS HOW TO CALL THE LOAD FUNCTION!!!!!
                 // theJournal.LoadFile(filename);

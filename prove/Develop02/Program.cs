@@ -24,11 +24,16 @@ class Program
         {
             DisplayMenu();
 
+            Console.WriteLine();
+
             Console.Write("Enter choice: ");
             string choice = Console.ReadLine();
             
             if (choice == "1")
             {
+                Console.WriteLine();
+                Console.WriteLine("----------");
+
                 // write a new entry
 
                 Console.Write("Who is going to be the author of this journal entry? ");
@@ -40,6 +45,8 @@ class Program
                 string dateText = theCurrentTime.ToShortDateString();
 
                 // Prompt Question
+                
+                string prompt = pg.DisplayPrompt();
 
 
                 // Response
@@ -50,19 +57,23 @@ class Program
                 Entry newEntry = new Entry();
                 newEntry._author = author;
                 newEntry._date = dateText;
-                newEntry._promptQuestion = "This should be the prompt question";
+                newEntry._promptQuestion = prompt;
                 newEntry._response = response;
 
                 theJournal._entries.Add(newEntry);
 
                 List<Entry> en = new List<Entry>();
                 en.Add(newEntry);
+
+                Console.WriteLine("----------");
+                Console.WriteLine();
             }
             else if (choice == "2")
             {
                 // Display the journal
-
+                
                 theJournal.DisplayAll();
+                
             }
             else if (choice == "3")
             {
@@ -85,6 +96,7 @@ class Program
             else if (choice == "4")
             {
                 // Load the journal from a file
+                theJournal.DisplaySavedFile();
             }
             else if (choice == "5")
             {
