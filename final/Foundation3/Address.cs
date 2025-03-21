@@ -3,10 +3,10 @@ public class Address
     private string _street;
     private string _city;
     private string _state;
-    private string _zipCode;
+    private int _zipCode;
 
 
-    public Address(string street, string city, string state, string zipCode)
+    public Address(string street, string city, string state, int zipCode)
     {
         _street = street;
         _city = city;
@@ -15,5 +15,8 @@ public class Address
     }
 
 
-    
+    public string GetWholeAddress()
+    {
+        return $"{_street}, {_city}, {_state} {_zipCode}";
+    }
 }
