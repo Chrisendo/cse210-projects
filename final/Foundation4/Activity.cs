@@ -1,10 +1,10 @@
 public abstract class Activity
 {
-    protected DateTime _date;
+    protected string _date;
     protected int _durationInMinutes;
     protected string _nameOfActivity;
 
-    public Activity(DateTime date, int durationInMinutes, string name)
+    public Activity(string date, int durationInMinutes, string name)
     {
         _date = date;
         _durationInMinutes = durationInMinutes;
@@ -21,6 +21,6 @@ public abstract class Activity
         double speed = GetSpeedInMph();
         double pace = GetMinPerMilePace();
 
-        return $"Date: {_date} {_nameOfActivity} ({_durationInMinutes} min) - Distance: {distance} miles, Speed: {speed} mph, Pace: {pace} minutes per mile";
+        return $"Date: {_date:dd MMM} {_nameOfActivity} ({_durationInMinutes} min) - Distance: {distance:F1} miles, Speed: {speed:F1} mph, Pace: {pace:F1} minutes per mile";
     }
 }
